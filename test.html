@@ -1,0 +1,1672 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js - HTML5 Presentations</title>
+		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script src="js/Jquery1.7.2.min.js"></script>	
+		<script src="js/dmnsMasterController.js"></script>
+			
+	</head>
+	<body>
+		<div class="node reveal adult1a">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Fight it Out</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-2c">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section class="home">
+						<h2>When there's an arguement, would you rather:</h2>
+						<p>
+							<ul>
+								<li>
+									<a href="#" class="leftAnswer">Fight it Out</a>
+								</li>
+								<li>
+									<a href="#" class="rightAnswer">Talk It Out</a>
+								</li>
+								<li>
+									<a href="#" class="downAnswer">Keep Out</a>
+								</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Keep Out</h2>
+						<p>
+							Flavor Text
+						</p>
+						<a href="#" class="navigateTo" id="goTo-2b">Next Question</a>
+					</section>
+				</section>
+				<section>
+					<h2>Talk it Out</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-2a">Next Question</a>
+				</section>
+			</div>
+			<script src="lib/js/head.min.js"></script>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult1a',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult2a">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Party!</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3d">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Question 2</h2>
+					<p>
+						Are you a bookworm or would you rather be partying?
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Party</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Bookworm</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Bookworm</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3e">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult2a',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult2b">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Yes</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3d">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Would you consider yourself an artistic person?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Yes</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">No</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>No</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3c">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult2b',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult2c">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Employ Others</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3a">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Would you rather employ others to fight your battles or get your hands dirty?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Employ Others</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Hands Dirty</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h2>Hands Dirty</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3b">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult2c',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult3a">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Outdoors</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4a">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Wuold you rather spend your days outdoors or indoors?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Outdoors</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Indoors</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Indoors</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3b">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult3a',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult3b">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Help Others</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4a">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Do you prefer to help others or look out for yourself first?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Help Others</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Put me first</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Put me first</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4b">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult3a',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult3c">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Jock</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4b">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Would you rather be a jock or the spectator?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Jock</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Spectator</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Spectator</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4c">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult3c',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult3d">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Organized</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4d">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Are you more organized or more of a free spirit?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Organized</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Free Spirit</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Free Spirit</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4e">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult3d',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult3e">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Nature</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4e">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Do you feel more connected to nature or the boardroom</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Nature</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Boardroom</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Boardroom</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4f">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult3e',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult4a">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Hippie</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4b">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Are you a hippie or a hunter?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Hippie</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Hunter</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Hunter</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3c">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult4a',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult4b">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Talking About it</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-5a">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>When dealing with a challenge, do you prefer talking about it or doing something about it?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Talking About it</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Action</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Action</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-5b">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult4b',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult4c">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Titanium and steel</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end5">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Which do you prefer: titanium and steel or diamonds and pearls?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Titanium and steel</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">diamonds and pearls</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Diamonds and pearls</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end6">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult4c',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult4d">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>The Popular Kid</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-3c">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section class="home">
+						<h2>In school, were you the popular kid, the best friend, or the wallflower?</h2>
+						<p>
+							<ul>
+								<li>
+									<a href="#" class="leftAnswer">The Popular Kid</a>
+								</li>
+								<li>
+									<a href="#" class="rightAnswer">The Best Friend</a>
+								</li>
+								<li>
+									<a href="#" class="downAnswer">The Wallflower</a>
+								</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>The Best Friend</h2>
+						<p>
+							Flavor Text
+						</p>
+						<a href="#" class="navigateTo" id="goTo-4b">Next Question</a>
+					</section>
+				</section>
+				<section>
+					<h2>The Wallflower</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-5d">Next Question</a>
+				</section>
+			</div>
+			<script src="lib/js/head.min.js"></script>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult4d',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult4e">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Strategy</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-5d">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Are you more likely to employ strategy or brute force to achieve your goals?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Strategy</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Force</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Force</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4d">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult4e',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult4f">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Life of the Party</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-5e">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Do you want to be the life of the party or have an intimate conversation?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Life of the Party</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Conversation</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Conversation</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4e">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult4f',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult5a">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Grudges</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end1">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Do you hold onto grudges or let go?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Grudges</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Let Go</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Let Go</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end2">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult5a',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult5b">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Team Player</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end3">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Are you a team player or a lone wolf?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Team Player</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Lone Wolf</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Lone Wolf</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end4">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult5b',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult5c">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Hard liquor</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end3">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Hard liquor or wine?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Hard liquor</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Wine</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Wine</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end4">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult5c',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult5d">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Long term relationships</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-6a">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Are you into long term relationships or playing the field?</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Long term relationships</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Playing the field</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Playing the field</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-5c">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult5d',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult5e">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h2>Leader</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4b">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section class="home">
+						<h2>Do you consider yourself a leader, a follower, or do you march to your own drum?</h2>
+						<p>
+							<ul>
+								<li>
+									<a href="#" class="leftAnswer">Leader</a>
+								</li>
+								<li>
+									<a href="#" class="rightAnswer">Follower</a>
+								</li>
+								<li>
+									<a href="#" class="downAnswer">Own Drum</a>
+								</li>
+							</ul>
+						</p>
+					</section>
+					<section>
+						<h2>Follower</h2>
+						<p>
+							Flavor Text
+						</p>
+						<a href="#" class="navigateTo" id="goTo-6a">Next Question</a>
+					</section>
+				</section>
+				<section>
+					<h2>Own Drum</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-5da">Next Question</a>
+				</section>
+			</div>
+			<script src="lib/js/head.min.js"></script>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult5e',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		<div class="node adult6a">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Embrace</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end9">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Do you embrace or shirk responsibility</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Embrace</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Shirk</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Playing the field</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-end10">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult6a',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		
+		
+		
+		
+		<div class="template">
+			<!-- Used to fade in a background when a specific slide state is reached -->
+			<div class="state-background"></div>
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section class="leftResults">
+					<h2>Nature</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4e">Next Question</a>
+				</section>
+				<!-- Example of nested vertical slides -->
+				<section class="home">
+					<h2>Do you feel more connected to nature or the boardroom</h2>
+					<p>
+						<ul>
+							<li>
+								<a href="#" class="leftAnswer">Nature</a>
+							</li>
+							<li>
+								<a href="#" class="rightAnswer">Boardroom</a>
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section class="rightResults">
+					<h2>Boardroom</h2>
+					<p>
+						Flavor Text
+					</p>
+					<a href="#" class="navigateTo" id="goTo-4f">Next Question</a>
+				</section>
+			</div>
+			<script>
+				// Load reveal.js as well as a classList polyfill if needed
+				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
+
+					// Parse the query string into a key/value object
+					var query = {};
+					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
+						query[a.split('=').shift()] = a.split('=').pop();
+					});
+					// Fires when a slide with data-state=customevent is activated
+					//reveal.addEventListener('customevent', function() {
+					//						console.log('"customevent" has fired');
+					//});
+					// Fires each time a new slide is activated
+					//reveal.addEventListener('slidechanged', function(event) {
+					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
+					//});
+					// Full list of configuration options available here:
+					// https://github.com/hakimel/reveal.js#configuration
+					reveal.initialize({
+						controls : true,
+						progress : false,
+						history : true,
+						slideId : '.adult3e',
+						theme : query.theme || 'default', // default/neon/beige
+						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
+					});
+				});
+				// Load highlight.js for syntax highlighting of code samples
+				head.js('lib/js/highlight.js', function() {
+					hljs.initHighlightingOnLoad();
+				});
+				// If we're runnning the notes server we need to include some additional JS
+				// TODO Is there a better way to determine if we're running the notes server?
+				if(window.location.host === 'localhost:1947') {
+					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
+				}
+			</script>
+		</div>
+		
+	</body>
+</html>

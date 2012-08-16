@@ -5,17 +5,9 @@
  * 
  * Copyright (C) 2012 Hakim El Hattab, http://hakim.se
  */
-var Reveal = (function(){
-	
-	var HORIZONTAL_SLIDES_SELECTOR = '.reveal .slides>section',
-		VERTICAL_SLIDES_SELECTOR = '.reveal .slides>section.present>section',
-
-		IS_TOUCH_DEVICE = !!( 'ontouchstart' in window ),
-
-		// The horizontal and verical index of the currently active slide
-		indexh = 0,
-		indexv = 0,
-
+var reveal = (function(){
+		// ok, initialize is not happening BEFORE this so it's missing a lot of tags.  :(
+		var
 		// Configurations defaults, can be overridden at initialization time 
 		config = {
 			// Display controls in the bottom right corner
@@ -47,8 +39,18 @@ var Reveal = (function(){
 			theme: 'default', // default/neon/beige
 
 			// Transition style
-			transition: 'default' // default/cube/page/concave/linear(2d)
+			transition: 'default', // default/cube/page/concave/linear(2d)
+			
+			slideId: '.reveal '
 		},
+		// strings
+		HORIZONTAL_SLIDES_SELECTOR = config.slideId + '.slides>section',
+		VERTICAL_SLIDES_SELECTOR = config.slideId + '.slides>section.present>section',
+		IS_TOUCH_DEVICE = !!( 'ontouchstart' in window ),
+
+		// The horizontal and verical index of the currently active slide
+		indexh = 0,
+		indexv = 0,
 
 		// Slides may hold a data-state attribute which we pick up and apply 
 		// as a class to the body. This list contains the combined state of 
@@ -92,33 +94,54 @@ var Reveal = (function(){
 			handled: false,
 			threshold: 40
 		};
-	
-	
+
+	function loadOptions( options ){
+			
+			if (options == null) return;
+			
+			if (options.controls != null) config.controls = options.controls;
+			if (options.progress != null) config.progress = options.progress;
+			if (options.history != null) config.history = options.history;
+			if (options.keyboard != null) config.keyboard = options.keyboard;
+			if (options.loop != null) config.loop = options.loop;
+			if (options.autoSlide != null) config.autoSlide = options.autoSlide;
+			if (options.mouseWheel != null) config.mouseWheel = options.mouseWheel;
+			if (options.rollingLinks != null) config.rollingLinks = options.rollingLinks;
+			if (options.theme != null) config.theme = options.theme;
+			if (options.transition != null) config.transition = options.transition;
+			if (options.slideId != null) config.slideId = options.slideId;
+	}
+
 	/**
 	 * Starts up the slideshow by applying configuration
 	 * options and binding various events.
 	 */
 	function initialize( options ) {
 		
+		loadOptions(options);
+		
 		if( ( !supports2DTransforms && !supports3DTransforms ) || !supportsClassList ) {
 			document.body.setAttribute( 'class', 'no-transforms' );
 
 			// If the browser doesn't support core features we won't be 
 			// using JavaScript to control the presentation
+			
 			return;
 		}
-
+		
 		// Cache references to DOM elements
-		dom.wrapper = document.querySelector( '.reveal' );
-		dom.progress = document.querySelector( '.reveal .progress' );
-		dom.progressbar = document.querySelector( '.reveal .progress span' );
+		dom.wrapper = document.querySelector( config.slideId );
+		
+		dom.progress = document.querySelector( config.slideId + '.progress' );
+		dom.progressbar = document.querySelector( config.slideId +'.progress span' );
+		
 		
 		if ( config.controls ) {
-			dom.controls = document.querySelector( '.reveal .controls' );
-			dom.controlsLeft = document.querySelector( '.reveal .controls .left' );
-			dom.controlsRight = document.querySelector( '.reveal .controls .right' );
-			dom.controlsUp = document.querySelector( '.reveal .controls .up' );
-			dom.controlsDown = document.querySelector( '.reveal .controls .down' );
+			dom.controls = document.querySelector( config.slideId + ' .controls' );
+			dom.controlsLeft = document.querySelector( config.slideId + '.controls .left' );
+			dom.controlsRight = document.querySelector( config.slideId + '.controls .right' );
+			dom.controlsUp = document.querySelector( config.slideId + '.controls .up' );
+			dom.controlsDown = document.querySelector( config.slideId + '.controls .down' );
 		}
 
 		addEventListeners();
@@ -135,6 +158,7 @@ var Reveal = (function(){
 		// Start auto-sliding if it's enabled
 		cueAutoSlide();
 
+		setToDefaultSlide();
 		// Set up hiding of the browser address bar
 		if( navigator.userAgent.match( /(iphone|ipod|android)/i ) ) {
 			// Give the page some scrollable overflow
@@ -145,10 +169,10 @@ var Reveal = (function(){
 			window.addEventListener( 'load', removeAddressBar, false );
 			window.addEventListener( 'orientationchange', removeAddressBar, false );
 		}
-		
 	}
-
+	
 	function configure() {
+
 		if( supports3DTransforms === false ) {
 			// Fall back on the 2D transform theme 'linear'
 			config.transition = 'linear';
@@ -179,6 +203,7 @@ var Reveal = (function(){
 			// Add some 3D magic to our anchors
 			linkify();
 		}
+		
 	}
 
 	function addEventListeners() {
@@ -199,10 +224,10 @@ var Reveal = (function(){
 		
 		var rightAnswerArray = document.getElementsByClassName('rightAnswer');
 		for (var i = 0; i < rightAnswerArray.length; i++){
-			
 			rightAnswerArray[i].addEventListener('click', preventAndForward( navigateRight ), false);
-			alert("Yes, this happens... " + i);
 		}
+		
+		// $("#letsTryThis").addEventListener('click', TestHiMom, false);
 
 		var downAnswerArray = document.getElementsByClassName('downAnswer');
 		for (var i = 0; i < downAnswerArray.length; i++){
@@ -232,6 +257,7 @@ var Reveal = (function(){
 			dom.controlsDown.removeEventListener( 'click', preventAndForward( navigateDown ), false );
 		}
 	}
+
 
 	/**
 	 * Extend object a with the properties of object b. 
@@ -266,7 +292,6 @@ var Reveal = (function(){
 	 */
 	function preventAndForward( delegate ) {
 		return function( event ) {
-			alert("In prevent and forward");
 			event.preventDefault();
 			delegate.call();
 		}
@@ -454,6 +479,7 @@ var Reveal = (function(){
 	 */
 	function onWindowHashChange( event ) {
 		readURL();
+		slide(1,0); // After changing to new question, takes us to default HOME slide (which apparently is always h=1 v=0)
 	}
 
 	/**
@@ -461,8 +487,9 @@ var Reveal = (function(){
 	 */
 	function linkify() {
         if( supports3DTransforms ) {
-        	var nodes = document.querySelectorAll( '.reveal .slides section a:not(.image)' );
-
+        	// When adding a second "slides" div tag, this number doesn't change... 
+        	var nodes = document.querySelectorAll( config.slideId + '.slides section a:not(.image)' );
+			
 	        for( var i = 0, len = nodes.length; i < len; i++ ) {
 	            var node = nodes[i];
 	            
@@ -532,8 +559,8 @@ var Reveal = (function(){
 	 */
 	function deactivateOverview() {
 		dom.wrapper.classList.remove( 'overview' );
-
-		var slides = Array.prototype.slice.call( document.querySelectorAll( '.reveal .slides section' ) );
+	
+		var slides = Array.prototype.slice.call( document.querySelectorAll( config.slideId + '.slides section' ) );
 
 		for( var i = 0, len = slides.length; i < len; i++ ) {
 			var element = slides[i];
@@ -669,6 +696,7 @@ var Reveal = (function(){
 	 * Updates the visual slides to represent the currently
 	 * set indices. 
 	 */
+	// Somewhere in here, when we slide to the right by one and there are HIDDEN real 
 	function slide( h, v ) {
 		// Remember the state before this slide
 		var stateBefore = state.concat();
@@ -912,6 +940,13 @@ var Reveal = (function(){
 		slide( h, v );
 	}
 	
+	/**
+	 * Goes to the slide based on the slide's id
+	 */
+	function navigateToId(slideId){
+		
+	}
+	
 	function navigateLeft() {
 		// Prioritize hiding fragments
 		if( overviewIsActive() || previousFragment() === false ) {
@@ -921,7 +956,7 @@ var Reveal = (function(){
 	}
 	function navigateRight() {
 		// Prioritize revealing fragments
-		alert("Hi.  Going right please");
+		
 		if( overviewIsActive() || nextFragment() === false ) {
 			slide( indexh + 1, 0 );
 		}
@@ -953,7 +988,7 @@ var Reveal = (function(){
 			}
 			else {
 				// Fetch the previous horizontal slide, if there is one
-				var previousSlide = document.querySelector( '.reveal .slides>section.past:nth-child(' + indexh + ')' );
+				var previousSlide = document.querySelector( config.slideId + '.slides>section.past:nth-child(' + indexh + ')' );
 
 				if( previousSlide ) {
 					indexv = ( previousSlide.querySelectorAll('section').length + 1 ) || 0;
@@ -970,6 +1005,7 @@ var Reveal = (function(){
 	function navigateNext() {
 		// Prioritize revealing fragments
 		if( nextFragment() === false ) {
+			
 			availableRoutes().down ? navigateDown() : navigateRight();
 		}
 
@@ -1007,12 +1043,16 @@ var Reveal = (function(){
 
 		// Forward event binding to the reveal DOM element
 		addEventListener: function( type, listener, useCapture ) {
-			( dom.wrapper || document.querySelector( '.reveal' ) ).addEventListener( type, listener, useCapture );
+			( dom.wrapper || document.querySelector( config.slideId) ).addEventListener( type, listener, useCapture );
 		},
 		removeEventListener: function( type, listener, useCapture ) {
-			( dom.wrapper || document.querySelector( '.reveal' ) ).removeEventListener( type, listener, useCapture );
+			( dom.wrapper || document.querySelector( config.slideId) ).removeEventListener( type, listener, useCapture );
 		}
 	};
 	
+	/// DMNS function -- sets starting slide default to CENTER where 
+	function setToDefaultSlide(){
+		slide( 1, 0 ); // default slide is always 1 x 0.  First slide (left) is the 0 spot.
+	};
 })();
 
