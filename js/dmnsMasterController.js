@@ -6,7 +6,7 @@
 $('document').ready(function() {
 	setUpNavigationBetweenNodes('.navigateTo');
    	hideAllSlideDivs('.node');
-   	fadeInDiv('adult1a');
+   	fadeInDiv('start');
  });
 
 function setUpNavigationBetweenNodes(className){
@@ -23,7 +23,7 @@ function goToNode(target){
 	//remove "reveal" class from all divs
 	removeTagsFromAllDivs("reveal");
 	
-	var targetNode = 'adult' + target;
+	var targetNode = target;
 	
 	// add "reveal" class to ONLY the active div
 	addTagToActiveDiv(targetNode, 'reveal');

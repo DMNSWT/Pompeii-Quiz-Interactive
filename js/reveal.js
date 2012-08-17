@@ -227,13 +227,15 @@ var reveal = (function(){
 			rightAnswerArray[i].addEventListener('click', preventAndForward( navigateRight ), false);
 		}
 		
-		// $("#letsTryThis").addEventListener('click', TestHiMom, false);
-
 		var downAnswerArray = document.getElementsByClassName('downAnswer');
 		for (var i = 0; i < downAnswerArray.length; i++){
 			downAnswerArray[i].addEventListener('click', preventAndForward( navigateDown ), false);
 		}
 
+		var down2AnswerArray = document.getElementsByClassName('down2Answer');
+		for (var i = 0; i < down2AnswerArray.length; i++){
+			down2AnswerArray[i].addEventListener('click', preventAndForward( navigateDownTwice ), false);
+		}
 
 		if ( config.controls && dom.controls ) {
 			dom.controlsLeft.addEventListener( 'click', preventAndForward( navigateLeft ), false );
@@ -241,8 +243,18 @@ var reveal = (function(){
 			dom.controlsUp.addEventListener( 'click', preventAndForward( navigateUp ), false );
 			dom.controlsDown.addEventListener( 'click', preventAndForward( navigateDown ), false );	
 		}
+		
+		var navigateToTagsArray = document.getElementsByClassName('navigateTo');
+		for (var i = 0; i < navigateToTagsArray.length; i++)
+		{
+			navigateToTagsArray[i].addEventListener('click', ResetSlidePositionToHome, false);
+		}
 	}
-
+	
+	function ResetSlidePositionToHome() {
+		slide(1, 0);
+	}
+	
 	function removeEventListeners() {
 		document.removeEventListener( 'keydown', onDocumentKeyDown, false );
 		document.removeEventListener( 'touchstart', onDocumentTouchStart, false );
@@ -478,8 +490,10 @@ var reveal = (function(){
 	 * @param {Object} event
 	 */
 	function onWindowHashChange( event ) {
-		readURL();
-		slide(1,0); // After changing to new question, takes us to default HOME slide (which apparently is always h=1 v=0)
+		// document.onclick = myClickListener;
+		// readURL();
+		
+		// slide(1,0); // Is there a way to click this and trigger it only during certain circumstances.
 	}
 
 	/**
@@ -698,6 +712,7 @@ var reveal = (function(){
 	 */
 	// Somewhere in here, when we slide to the right by one and there are HIDDEN real 
 	function slide( h, v ) {
+		
 		// Remember the state before this slide
 		var stateBefore = state.concat();
 
@@ -772,6 +787,30 @@ var reveal = (function(){
 				'previousSlide': previousVerticalSlides[ indexvBefore ] || previousHorizontalSlide,
 				'currentSlide': currentVerticalSlides[ indexv ] || currentHorizontalSlide
 			} );
+		}
+		
+		// document.onclick = myClickListener;
+	}
+	
+	function myClickListener(e)
+	{
+		var eventIsFiredFromElement;
+		if(e==null)
+		{
+			// I.E.
+			eventIsFiredFromElement = event.srcElement;
+		}
+		else
+		{
+			// Firefox
+			eventIsFiredFromElement = e.target;
+		}
+		console.log("Event is fired from element : " + eventIsFiredFromElement.getAttribute("class"));
+		
+		if (eventIsFiredFromElement.getAttribute("class") == "navigateTo")
+		{
+			console.log("Trying to Reset");
+			slide(1, 0);
 		}
 	}
 
@@ -968,9 +1007,18 @@ var reveal = (function(){
 		}
 	}
 	function navigateDown() {
+		console.log("YES, in navigateDown");
 		// Prioritize revealing fragments
 		if( overviewIsActive() || nextFragment() === false ) {
 			slide( indexh, indexv + 1 );
+		}
+	}
+	
+	function navigateDownTwice() {
+		// Prioritize revealing fragments
+		console.log("YES, in navigateDownTwice");
+		if( overviewIsActive() || nextFragment() === false ) {
+			slide( indexh, indexv + 2 );
 		}
 	}
 
@@ -1037,6 +1085,7 @@ var reveal = (function(){
 		navigatePrev: navigatePrev,
 		navigateNext: navigateNext,
 		toggleOverview: toggleOverview,
+		navigateDownTwice: navigateDownTwice,
 
 		addEventListeners: addEventListeners,
 		removeEventListeners: removeEventListeners,
