@@ -236,6 +236,12 @@ var reveal = (function(){
 		for (var i = 0; i < down2AnswerArray.length; i++){
 			down2AnswerArray[i].addEventListener('click', preventAndForward( navigateDownTwice ), false);
 		}
+		
+		var backAnswerArray = document.getElementsByClassName('backAnswer');
+		for (var i = 0; i < backAnswerArray.length; i++){
+			backAnswerArray[i].addEventListener('click', ResetSlidePositionToHome, false);
+		}
+
 
 		if ( config.controls && dom.controls ) {
 			dom.controlsLeft.addEventListener( 'click', preventAndForward( navigateLeft ), false );
@@ -712,7 +718,6 @@ var reveal = (function(){
 	 */
 	// Somewhere in here, when we slide to the right by one and there are HIDDEN real 
 	function slide( h, v ) {
-		
 		// Remember the state before this slide
 		var stateBefore = state.concat();
 

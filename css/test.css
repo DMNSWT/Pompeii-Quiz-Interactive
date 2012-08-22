@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+font-family: 'Quando', serif;
+
+html, body {
+	 
+}
+
+.reveal{
+	background-image: url('../StoneTabletBg.jpg')
+	
+}

@@ -28,13 +28,22 @@ function goToNode(target){
 	// add "reveal" class to ONLY the active div
 	addTagToActiveDiv(targetNode, 'reveal');
 	
-	// Set "FUTURE" slide to default -- the middle one so we can later choose left, right, or down
-	// And... I have no idea how to do this one yet.  Tell Reveal.js to do something cool.
-	
 	// navigate to new target
 	fadeInDiv(targetNode);
+		
+	/*
+	$('.reveal').fadeOut('fast', function(){
+		removeTagsFromAllDivs("reveal");
+		
+		var targetNode = target;
 	
+		// add "reveal" class to ONLY the active div
+		addTagToActiveDiv(targetNode, 'reveal');
 	
+		// navigate to new target
+		fadeInDiv(targetNode);
+	});
+	*/
 }
 
 function hideAllSlideDivs(className){
@@ -43,7 +52,9 @@ function hideAllSlideDivs(className){
 
 // TO DO this glitches... :(  Not hiding properly, but it still works.
 function fadeOutDiv(className){
-	$(className).fadeOut();
+	$(className).fadeOut(function(){
+		
+	});
 }
 
 function fadeInDiv(className){
@@ -58,11 +69,10 @@ function fadeInDiv(className){
 function removeTagsFromAllDivs(tagToRemove) {
 	// Remove "tagToRemove" from all Divs 
 	$("div").each(function(i){
-		//console.log("Class is: " + $(this).attr("class"));
 		var classList = $(this).attr("class");
 		if ($(this).attr("class").indexOf(tagToRemove) >= 0)
 		{
-			//console.log("This div has: " + tagToRemove);
+			$(this).hide();
 			$(this).removeClass(tagToRemove);
 		}
 	});

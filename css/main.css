@@ -10,6 +10,7 @@
  * FONT-FACE DEFINITIONS
  *********************************************/
 
+
 @font-face {
 	font-family: 'League Gothic';
 	src: url('../lib/font/league_gothic-webfont.ttf') format('truetype');
@@ -17,6 +18,15 @@
 	font-style: normal;
 }
 
+
+/*
+@font-face {
+	font-family: 'Quando';
+	src: url('http://fonts.googleapis.com/css?family=Quando') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+*/
 
 /*********************************************
  * GLOBAL STYLES
@@ -40,7 +50,8 @@ body {
 	font-size: 36px;
 	font-weight: 200;
 	letter-spacing: -0.02em;
-	color: #eee;
+	
+	color: #711315;
 
 	background: #1c1e20;
 	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPHJhZGlhbEdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgY3g9IjUwJSIgY3k9IjUwJSIgcj0iNzUlIj4KICAgIDxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiM1NTVhNWYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMWMxZTIwIiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L3JhZGlhbEdyYWRpZW50PgogIDxyZWN0IHg9Ii01MCIgeT0iLTUwIiB3aWR0aD0iMTAxIiBoZWlnaHQ9IjEwMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
@@ -61,7 +72,7 @@ body {
 .reveal h4 {
 	margin: 0 0 20px 0;
 	
-	color: #eee;
+	color: #711315;
 	
 	font-family: 'League Gothic', sans-serif;
 	line-height: 0.9em;
@@ -80,7 +91,7 @@ body {
 .reveal h2.inverted,
 .reveal h3.inverted,
 .reveal h4.inverted {
-	color: #fff;
+	color: #711315;
 	text-shadow: 0px 0px 2px rgba(0,0,0,0.2);
 }
 
@@ -311,7 +322,7 @@ body {
 		font-size: 30px;
 		position: absolute;
 		opacity: 0.1;
-		color: #fff;
+		color: #711315;
 	}
 		.reveal .controls a.enabled {
 			opacity: 0.6;
@@ -434,7 +445,7 @@ body {
     top: 0;
     padding: 0 2px;
 
-    color: #fff;
+    color: #711315;
     background: hsl(185, 60%, 35%);
 
     -webkit-transform-origin: 50% 0%;
@@ -455,13 +466,13 @@ body {
 
 .reveal .slides {
 	position: absolute;
-	width: 900px;
-	height: 600px;
+	width: 960px;
+	height: 800px;
 	
 	left: 50%;
 	top: 50%;
 	margin-left: -450px;
-	margin-top: -320px;
+	margin-top: -450px;
 	padding: 20px 0px;
 	
 	text-align: center;
@@ -483,13 +494,55 @@ body {
  	        perspective-origin: 50% 25%;
 }
 
+.option{
+	/*width: 350px;
+	height: 200px;
+	background-color: #efe;
+	background-image: url('../CheckBoxOff.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	*/
+}
+
+.leftAnswer{
+	left: 500px;
+	top: 50px;
+}
+
+.rightAnswer{
+	right: 500px;
+	top: 50px;
+}
+
+.downAnswer{
+	position:relative;
+	
+}
+
+.down2Answer{
+	position:relative;
+	
+}
+
+.reveal .slides section{
+	background-image: url('../StoneTabletBg.jpg');
+}
+
+.container {
+	position: relative;
+	top: 220px;
+	margin: 0px 100px 0px 100px;
+} 
+
+
 .reveal .slides>section,
 .reveal .slides>section>section {
+	
 	display: none;
 	position: absolute;
 	width: 100%;
-	min-height: 600px;
-
+	min-height: 800px;
+	
     z-index: 10;
 	
 	-webkit-transform-style: preserve-3d;
@@ -552,7 +605,6 @@ body {
 	    -ms-transform: translate3d(0, 50%, 0) rotateX(-70deg) translate3d(0, 50%, 0);
 	        transform: translate3d(0, 50%, 0) rotateX(-70deg) translate3d(0, 50%, 0);
 }
-
 
 /*********************************************
  * CONCAVE TRANSITION
