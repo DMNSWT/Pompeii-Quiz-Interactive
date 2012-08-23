@@ -524,7 +524,7 @@ body {
 	
 }
 
-.reveal .slides section{
+.slideBG{
 	background-image: url('../StoneTabletBg.jpg');
 }
 
@@ -537,7 +537,6 @@ body {
 
 .reveal .slides>section,
 .reveal .slides>section>section {
-	
 	display: none;
 	position: absolute;
 	width: 100%;
@@ -563,7 +562,11 @@ body {
 	opacity: 1;
 }
 
-
+.reveal .slides>section.present .present{
+	display: block;
+	z-index: 11;
+	opacity: 1;
+}
 /*********************************************
  * DEFAULT TRANSITION
  *********************************************/

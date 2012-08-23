@@ -6,6 +6,7 @@
  * Copyright (C) 2012 Hakim El Hattab, http://hakim.se
  */
 var reveal = (function(){
+		
 		// ok, initialize is not happening BEFORE this so it's missing a lot of tags.  :(
 		var
 		// Configurations defaults, can be overridden at initialization time 
@@ -134,7 +135,6 @@ var reveal = (function(){
 		
 		dom.progress = document.querySelector( config.slideId + '.progress' );
 		dom.progressbar = document.querySelector( config.slideId +'.progress span' );
-		
 		
 		if ( config.controls ) {
 			dom.controls = document.querySelector( config.slideId + ' .controls' );
@@ -683,6 +683,7 @@ var reveal = (function(){
 				}
 				else if( i > index ) {
 					// Any element subsequent to index is given the 'future' class
+					
 					slides[i].classList.add( 'future' );
 				}
 
@@ -726,7 +727,7 @@ var reveal = (function(){
 
 		var indexhBefore = indexh,
 			indexvBefore = indexv;
-
+		
 		// Activate and transition to the new slide
 		indexh = updateSlides( HORIZONTAL_SLIDES_SELECTOR, h === undefined ? indexh : h );
 		indexv = updateSlides( VERTICAL_SLIDES_SELECTOR, v === undefined ? indexv : v );
@@ -810,11 +811,9 @@ var reveal = (function(){
 			// Firefox
 			eventIsFiredFromElement = e.target;
 		}
-		console.log("Event is fired from element : " + eventIsFiredFromElement.getAttribute("class"));
 		
 		if (eventIsFiredFromElement.getAttribute("class") == "navigateTo")
 		{
-			console.log("Trying to Reset");
 			slide(1, 0);
 		}
 	}
@@ -1012,7 +1011,6 @@ var reveal = (function(){
 		}
 	}
 	function navigateDown() {
-		console.log("YES, in navigateDown");
 		// Prioritize revealing fragments
 		if( overviewIsActive() || nextFragment() === false ) {
 			slide( indexh, indexv + 1 );
@@ -1020,8 +1018,6 @@ var reveal = (function(){
 	}
 	
 	function navigateDownTwice() {
-		// Prioritize revealing fragments
-		console.log("YES, in navigateDownTwice");
 		if( overviewIsActive() || nextFragment() === false ) {
 			slide( indexh, indexv + 2 );
 		}
@@ -1108,5 +1104,13 @@ var reveal = (function(){
 	function setToDefaultSlide(){
 		slide( 1, 0 ); // default slide is always 1 x 0.  First slide (left) is the 0 spot.
 	};
+	
+	// Test for Firefox
+	//document.documentElement.
+	//var leftAnswerArray = document.getElementsByClassName('leftAnswer');
+	//for (var i = 0; i < leftAnswerArray.length; i++){
+	//	leftAnswerArray[i].addEventListener('click', preventAndForward( navigateLeft ), false);
+	//}
+
 })();
 

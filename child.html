@@ -15,6 +15,10 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 		<script src="js/Jquery1.7.2.min.js"></script>
 		<script src="js/dmnsMasterController.js"></script>
+		<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script src="js/DMNS-IE-Transitions.js"></script>
+		<![endif]-->
 	</head>
 	<body>
 		<div class="node reveal start">
@@ -22,17 +26,23 @@
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<div class="container">
-						<p>You picked</p>
-						<h3>Dog</h3>
-						<a href="#" class="navigateTo" id="goTo-child2a">On to the next question</a>
-						<div class="backAnswer">Back</div>
-					</div>
+				<section class="slideBG past">
+					
+						<div class="container">
+							<p>
+								You picked
+							</p>
+							<h3>Dog</h3>
+							<a href="#" class="navigateTo" id="goTo-child2a">On to the next question</a>
+							<div class="backAnswer">
+								Back
+							</div>
+						</div>
+					
 				</section>
 				<!-- Example of nested vertical slides -->
 				<section>
-					<section class="home">
+					<section class="home slideBG present">
 						<div class="container">
 							<h3>Would you rather have a pet dog, fish, or bird?</h3>
 							<p>
@@ -49,25 +59,34 @@
 							</p>
 						</div>
 					</section>
-					<section>
+					<section class="slideBG future">
 						<div class="container">
-							<p>You picked</p>
+							<p>
+								You picked
+							</p>
 							<h3>Fish</h3>
 							<a href="#" class="navigateTo" id="goTo-child2c">Next Question</a>
-							<div class="backAnswer">Back</div>
+							<div class="backAnswer">
+								Back
+							</div>
 						</div>
 					</section>
 				</section>
-				<section>
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Bird</h3>
 						<a href="#" class="navigateTo" id="goTo-child2b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -106,22 +125,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child2a">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>People</h3>
 						<a href="#" class="navigateTo" id="goTo-child3a">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>When you grow up, do you want to have a job working with people or working with animals?</h3>
 						<p>
@@ -136,15 +160,20 @@
 						</p>
 					</div>
 				</section>
-				<section>
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Animals</h3>
 						<a href="#" class="navigateTo" id="goTo-child3b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -183,22 +212,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child2b">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Yes</h3>
 						<a href="#" class="navigateTo" id="goTo-child3c">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Do you like arts and crafts?</h3>
 						<p>
@@ -213,15 +247,20 @@
 						</p>
 					</div>
 				</section>
-				<section>
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>No</h3>
 						<a href="#" class="navigateTo" id="goTo-child3d">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -260,22 +299,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child2c">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Strategy</h3>
 						<a href="#" class="navigateTo" id="goTo-child3e">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Do you prefer strategy like Monopoly or Chess or games of chance like Chutes and Ladders or Life?</h3>
 						<p>
@@ -290,15 +334,20 @@
 						</p>
 					</div>
 				</section>
-				<section>
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Chance</h3>
 						<a href="#" class="navigateTo" id="goTo-child3d">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -337,22 +386,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child3a">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Inside</h3>
 						<a href="#" class="navigateTo" id="goTo-child3c">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Which do you prefer: playing inside or playing outside?</h3>
 						<p>
@@ -367,15 +421,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Outside</h3>
 						<a href="#" class="navigateTo" id="goTo-child3b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -414,22 +473,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child3b">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Woods</h3>
 						<a href="#" class="navigateTo" id="goTo-child4a">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>If you were going on a vacation, would you rather go camping in the woods or go to the beach?</h3>
 						<p>
@@ -444,15 +508,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Beach</h3>
 						<a href="#" class="navigateTo" id="goTo-child4b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -491,22 +560,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child3c">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Crafts</h3>
 						<a href="#" class="navigateTo" id="goTo-child5b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Which do you prefer: making an art project or playing music?</h3>
 						<p>
@@ -521,15 +595,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Music</h3>
 						<a href="#" class="navigateTo" id="goTo-child3b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -568,22 +647,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child3d">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Student Council</h3>
 						<a href="#" class="navigateTo" id="goTo-child3e">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>After school, would you rather spend your time with an organization like student council or playing at the park?</h3>
 						<p>
@@ -598,15 +682,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Park</h3>
 						<a href="#" class="navigateTo" id="goTo-child4c">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -645,23 +734,28 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child3e">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Art/Music</h3>
 						<a href="#" class="navigateTo" id="goTo-child3c">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section>
-					<section class="home">
+				<section class="present">
+					<section class="home slideBG present">
 						<div class="container">
 							<h3>What is your favorite class at school: art/music, gym, math/science, or English/history</h3>
 							<p>
@@ -682,34 +776,45 @@
 							</p>
 						</div>
 					</section>
-					<section class="down">
+					<section class="slideBG down future">
 						<div class="container">
-						<p>You picked</p>	
+							<p>
+								You picked
+							</p>
 							<h3>Math/Science</h3>
 							<a href="#" class="navigateTo" id="goTo-child2a">Next Question</a>
-							<div class="backAnswer">Back</div>
+							<div class="backAnswer">
+								Back
+							</div>
 						</div>
 					</section>
-					<section class="down2">
+					<section class="slideBG down2 future">
 						<div class="container">
-							<p>You picked</p>
+							<p>
+								You picked
+							</p>
 							<h3>English/History</h3>
-							
 							<a href="#" class="navigateTo" id="goTo-child5b">Next Question</a>
-							<div class="backAnswer">Back</div>
+							<div class="backAnswer">
+								Back
+							</div>
 						</div>
 					</section>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Gym</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child4c">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -748,23 +853,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child4a">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>People</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child5b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Would you rather spend time with people or animals?</h3>
 						<p>
@@ -779,16 +888,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Animals</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child5a">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -827,24 +940,28 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child4b">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Track Team</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child5a">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section>
-					<section class="home">
+				<section class="present">
+					<section class="home slideBG present">
 						<div class="container">
 							<h3>Would you rather be on your school's track team, swim team, or football team?</h3>
 							<p>
@@ -862,26 +979,33 @@
 							</p>
 						</div>
 					</section>
-					<section class="down">
+					<section class="slideBG down future">
 						<div class="container">
-							<p>You picked</p>
+							<p>
+								You picked
+							</p>
 							<h3>Football Team</h3>
-							
 							<a href="#" class="navigateTo" id="goTo-child5d">Next Question</a>
-							<div class="backAnswer">Back</div>
+							<div class="backAnswer">
+								Back
+							</div>
 						</div>
 					</section>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Swim Team</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child5c">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -920,23 +1044,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child4c">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>No</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child3a">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Do you like or play sports?</h3>
 						<p>
@@ -951,16 +1079,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Yes</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child4b">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -999,23 +1131,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child5a">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Horses</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend1">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Do you prefer horses or dolphins?</h3>
 						<p>
@@ -1030,17 +1166,21 @@
 						</p>
 					</div>
 				</section>
-				<section>
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Dolphins</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend2">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1079,23 +1219,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child5b">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Crowd</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child5d">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Do you like being in front of a crowd or behind the scenes?</h3>
 						<p>
@@ -1110,16 +1254,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Behind</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-child6a">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1158,23 +1306,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child5c">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Buy</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend5">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Would you rather buy music by your favorite band or make your own music?</h3>
 						<p>
@@ -1189,16 +1341,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Conversation</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend6">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1237,23 +1393,27 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child5d">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Athlete</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend7">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Would you rather be a professional athlete or a doctor?</h3>
 						<p>
@@ -1268,16 +1428,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Doctor</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend8">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1316,6 +1480,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node child6a">
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -1323,15 +1488,18 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<div class="container">
-					<section class="leftResults">
-						<p>You picked</p>
+					<section class="slideBG past">
+						<p>
+							You picked
+						</p>
 						<h3>Lawyer</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend3">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 				</div>
 				</section> <!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>Would you rather be a lawyer or a banker?</h3>
 						<p>
@@ -1346,16 +1514,20 @@
 						</p>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container">
-						<p>You picked</p>
+						<p>
+							You picked
+						</p>
 						<h3>Banker</h3>
-						
 						<a href="#" class="navigateTo" id="goTo-childend4">Next Question</a>
-						<div class="backAnswer">Back</div>
+						<div class="backAnswer">
+							Back
+						</div>
 					</div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1394,26 +1566,30 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend1">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults">
+				<section class="slideBG past">
 					<div class="container"></div>
 				</section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
-						<p>You matched with the god:</p>
+						<p>
+							You matched with the god:
+						</p>
 						<h3>Diana</h3>
 					</div>
 				</section>
-				<section class="rightResults">
+				<section class="slideBG future">
 					<div class="container"></div>
 				</section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1452,22 +1628,24 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend2">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section class="leftResults"></section>
+				<section class="slideBG future"></section>
 				<!-- Example of nested vertical slides -->
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>End: Neptune</h3>
 						<p></p>
 					</div>
 				</section>
-				<section class="rightResults"></section>
+				<section class="slideBG future"></section>
 			</div>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1506,6 +1684,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend3">
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -1513,7 +1692,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section></section>
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>End: Minerva</h3>
 					</div>
@@ -1521,6 +1700,7 @@
 				<section></section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1559,6 +1739,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend4">
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -1566,7 +1747,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section></section>
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>End: Fortuna</h3>
 					</div>
@@ -1574,6 +1755,7 @@
 				<section></section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1612,6 +1794,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend5">
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -1619,7 +1802,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section></section>
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>End: Venus</h3>
 					</div>
@@ -1627,6 +1810,7 @@
 				<section></section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1665,6 +1849,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend6">
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -1672,7 +1857,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section></section>
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>End: Apollo</h3>
 					</div>
@@ -1680,6 +1865,7 @@
 				<section></section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1718,6 +1904,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend7">
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -1725,7 +1912,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section></section>
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>End: Hercules</h3>
 					</div>
@@ -1733,6 +1920,7 @@
 				<section></section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1771,6 +1959,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
+			<![endif]-->
 		</div>
 		<div class="node childend8">
 			<!-- Used to fade in a background when a specific slide state is reached -->
@@ -1778,7 +1967,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section></section>
-				<section class="home">
+				<section class="home slideBG present">
 					<div class="container">
 						<h3>End: Mercury</h3>
 					</div>
@@ -1786,6 +1975,7 @@
 				<section></section>
 			</div>
 			<script src="lib/js/head.min.js"></script>
+			<![if (!IE7)&(!IE8)]>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
 				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
@@ -1824,85 +2014,7 @@
 					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
 				}
 			</script>
-		</div>
-		<div class="node template">
-			<!-- Used to fade in a background when a specific slide state is reached -->
-			<div class="state-background"></div>
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section class="leftResults">
-					<div class="container">
-						<h3>Nature</h3>
-						<p>
-							Flavor Text
-						</p>
-						<a href="#" class="navigateTo" id="goTo-child4e">Next Question</a>
-					</div>
-				</section>
-				<!-- Example of nested vertical slides -->
-				<section class="home">
-					<div class="container">
-						<h3>Do you feel more connected to nature or the boardroom</h3>
-						<p>
-							<ul>
-								<li>
-									<a href="#" class="option leftAnswer">Nature</a>
-								</li>
-								<li>
-									<a href="#" class="option rightAnswer">Boardroom</a>
-								</li>
-							</ul>
-						</p>
-					</div>
-				</section>
-				<section class="rightResults">
-					<div class="container">
-						<h3>Boardroom</h3>
-						<p>
-							Flavor Text
-						</p>
-						<a href="#" class="navigateTo" id="goTo-child4f">Next Question</a>
-					</div>
-				</section>
-			</div>
-			<script>
-				// Load reveal.js as well as a classList polyfill if needed
-				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
-
-					// Parse the query string into a key/value object
-					var query = {};
-					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
-						query[a.split('=').shift()] = a.split('=').pop();
-					});
-					// Fires when a slide with data-state=customevent is activated
-					//reveal.addEventListener('customevent', function() {
-					//						console.log('"customevent" has fired');
-					//});
-					// Fires each time a new slide is activated
-					//reveal.addEventListener('slidechanged', function(event) {
-					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-					//});
-					// Full list of configuration options available here:
-					// https://github.com/hakimel/reveal.js#configuration
-					reveal.initialize({
-						controls : true,
-						progress : false,
-						history : true,
-						slideId : '.child3e',
-						theme : query.theme || 'default', // default/neon/beige
-						transition : query.transition || 'default' // default/cube/page/concave/linear(2d)
-					});
-				});
-				// Load highlight.js for syntax highlighting of code samples
-				head.js('lib/js/highlight.js', function() {
-					hljs.initHighlightingOnLoad();
-				});
-				// If we're runnning the notes server we need to include some additional JS
-				// TODO Is there a better way to determine if we're running the notes server?
-				if(window.location.host === 'localhost:1947') {
-					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
-				}
-			</script>
+			<![endif]-->
 		</div>
 	</body>
 </html>

@@ -30,20 +30,6 @@ function goToNode(target){
 	
 	// navigate to new target
 	fadeInDiv(targetNode);
-		
-	/*
-	$('.reveal').fadeOut('fast', function(){
-		removeTagsFromAllDivs("reveal");
-		
-		var targetNode = target;
-	
-		// add "reveal" class to ONLY the active div
-		addTagToActiveDiv(targetNode, 'reveal');
-	
-		// navigate to new target
-		fadeInDiv(targetNode);
-	});
-	*/
 }
 
 function hideAllSlideDivs(className){
@@ -52,9 +38,7 @@ function hideAllSlideDivs(className){
 
 // TO DO this glitches... :(  Not hiding properly, but it still works.
 function fadeOutDiv(className){
-	$(className).fadeOut(function(){
-		
-	});
+	$(className).fadeOut();
 }
 
 function fadeInDiv(className){
@@ -87,11 +71,4 @@ function addTagToActiveDiv(activeSection, tagToAdd){
 			//console.log("And added new TAG");
 		}
 	});
-	
-	//$("div").each(function(i){
-//		if ($(this).attr("class").indexOf(tagToAdd) >= 0)
-		//{
-//			console.log("And this proves it: " + $(this).attr("class"));
-		//}
-	//});
 }
