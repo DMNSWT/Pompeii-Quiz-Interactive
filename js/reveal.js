@@ -242,7 +242,6 @@ var reveal = (function(){
 			backAnswerArray[i].addEventListener('click', ResetSlidePositionToHome, false);
 		}
 
-
 		if ( config.controls && dom.controls ) {
 			dom.controlsLeft.addEventListener( 'click', preventAndForward( navigateLeft ), false );
 			dom.controlsRight.addEventListener( 'click', preventAndForward( navigateRight ), false );
