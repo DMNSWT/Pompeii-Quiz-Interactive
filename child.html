@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta http-equiv="X-UA-Compatible" content="chrome=1, IE=edge">
-    	<script src="js/html5shiv.js" type="text/javascript"></script>
+		<script src="js/html5shiv.js" type="text/javascript"></script>
 		<meta charset="utf-8">
 		<title>reveal.js - HTML5 Presentations</title>
 		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
@@ -27,36 +27,33 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section class="slideBG past">
-					
-						<div class="container">
-							<p>
-								You picked
-							</p>
-							<h3>Dog</h3>
-							<a href="#" class="navigateTo" id="goTo-child2a">On to the next question</a>
-							<div class="backAnswer">
-								Back
-							</div>
+					<div class="container">
+						<p>
+							You picked
+						</p>
+						<h3>Dog</h3>
+						<a href="#" class="navigateTo" id="goTo-child2a">On to the next question</a>
+						<div class="backAnswer">
+							Back
 						</div>
-					
+					</div>
 				</section>
 				<!-- Example of nested vertical slides -->
 				<section>
 					<section class="home slideBG present">
 						<div class="container">
 							<h3>Would you rather have a pet dog, fish, or bird?</h3>
-							<p>
-								<div class="option leftAnswer">
-									Dog
-								</div>
-								<div class="option rightAnswer">
-									Bird
-								</div>
-								<div class="option downAnswer">
-									Fish
-								</div>
-								</ul>
-							</p>
+							<ul>
+								<li>
+									<a href="#" class="option leftAnswer">Dog</a>
+								</li>
+								<li>
+									<a href="#" class="option rightAnswer">Bird</a>
+								</li>
+								<li>
+									<a href="#" class="option rightAnswer">Fish</a>
+								</li>
+							</ul>
 						</div>
 					</section>
 					<section class="slideBG future">
@@ -2016,33 +2013,41 @@
 			</script>
 			<![endif]-->
 		</div>
-		    <!--Chrome Frame For XP machines and IE8 or IE7 users-->
-    <span class="modalBG"></span>
-    <span id="chromeFrameContainer">
-        <p class="winXPie8Message">
-            <strong>Woops! This interactive will not work for you</strong><br />
-            Looks like you are using Windows XP or older and an older version of Internet Explorer.<br />
-            We recommend you use if you are using Windows XP or below, please activate Google
-            Chrome Frame (below), which will be a wonderful addition to your browser and enable
-            you to use this interactive.
-            <br />
-            Please restart your browser when download is complete.<br />
-            <br />
-            You may also use one of these other great, updated and secure browsers!<br />
-            <a href="http://www.mozilla.com/en-US/firefox/personal.html" target="_blank" onClick="javascript: pageTracker._trackPageview('interactive-XP/IE-Firefox-warningLink');"><img src="http://www.dmns.org/media/2251/FirefoxLogo.jpg" /></a> 
-                <a href="http://www.google.com/chrome" target="_blank" onClick="javascript: pageTracker._trackPageview('interactive-XP/IE-Chrome-warningLink');"><img src="http://www.dmns.org/media/2252/GoogleChromeLogo.jpg" /></a>
-        </p>
-        <iframe src="http://www.google.com/chromeframe/?quickenable=true" width="800" height="700">
-        </iframe>
-    </span>
-    <!--Message for IE8 users on Vista or Windows 7-->
-  <span id="IEBrowserWarning">
-      <p><strong>PLEASE UPDATE YOUR BROWSER:</strong><br /> WOOPS! It looks like you are using an older version of Internet Explorer. (Internet Explorer 7 or Internet Explorer 8)<br />
-      This interactive will not work for you. <br /><br />Please upgrade to a more modern and secure browser. Browsers like Internet Explorer 9, Firefox or Google Chrome <br />
-    <a href="http://windows.microsoft.com/en-us/internet-explorer/products/ie/home" target="_blank" onClick="javascript: pageTracker._trackPageview('/interactive-IE-Upgrade-warningLink');" title="Upgrade your browser to the most recent and secure Internet Explorer 9"><img src="http://www.dmns.org/media/11888/IEUpdateLogo.jpg" /></a>
-  <a href="http://www.mozilla.com/en-US/firefox/personal.html" target="_blank" onClick="javascript: pageTracker._trackPageview('/interactive-IE-Firefox-warningLink');"><img src="http://www.dmns.org/media/2251/FirefoxLogo.jpg" /></a>
-  <a href="http://www.google.com/chrome" target="_blank" onClick="javascript: pageTracker._trackPageview('/interactive-IE-Chrome-warningLink');"><img src="http://www.dmns.org/media/2252/GoogleChromeLogo.jpg" /></a>
-  </p></span>
-
+		<!--Chrome Frame For XP machines and IE8 or IE7 users-->
+		<span class="modalBG"></span>
+		<span id="chromeFrameContainer">
+			<p class="winXPie8Message">
+				<strong>Woops! This interactive will not work for you</strong>
+				<br />
+				Looks like you are using Windows XP or older and an older version of Internet Explorer.
+				<br />
+				We recommend you use if you are using Windows XP or below, please activate Google
+				Chrome Frame (below), which will be a wonderful addition to your browser and enable
+				you to use this interactive.
+				<br />
+				Please restart your browser when download is complete.
+				<br />
+				<br />
+				You may also use one of these other great, updated and secure browsers!
+				<br />
+				<a href="http://www.mozilla.com/en-US/firefox/personal.html" target="_blank" onClick="javascript: pageTracker._trackPageview('interactive-XP/IE-Firefox-warningLink');"><img src="http://www.dmns.org/media/2251/FirefoxLogo.jpg" /></a>
+				<a href="http://www.google.com/chrome" target="_blank" onClick="javascript: pageTracker._trackPageview('interactive-XP/IE-Chrome-warningLink');"><img src="http://www.dmns.org/media/2252/GoogleChromeLogo.jpg" /></a>
+			</p> <iframe src="http://www.google.com/chromeframe/?quickenable=true" width="800" height="700"></iframe> </span>
+		<!--Message for IE8 users on Vista or Windows 7-->
+		<span id="IEBrowserWarning">
+			<p>
+				<strong>PLEASE UPDATE YOUR BROWSER:</strong>
+				<br />
+				WOOPS! It looks like you are using an older version of Internet Explorer. (Internet Explorer 7 or Internet Explorer 8)
+				<br />
+				This interactive will not work for you.
+				<br />
+				<br />
+				Please upgrade to a more modern and secure browser. Browsers like Internet Explorer 9, Firefox or Google Chrome
+				<br />
+				<a href="http://windows.microsoft.com/en-us/internet-explorer/products/ie/home" target="_blank" onClick="javascript: pageTracker._trackPageview('/interactive-IE-Upgrade-warningLink');" title="Upgrade your browser to the most recent and secure Internet Explorer 9"><img src="http://www.dmns.org/media/11888/IEUpdateLogo.jpg" /></a>
+				<a href="http://www.mozilla.com/en-US/firefox/personal.html" target="_blank" onClick="javascript: pageTracker._trackPageview('/interactive-IE-Firefox-warningLink');"><img src="http://www.dmns.org/media/2251/FirefoxLogo.jpg" /></a>
+				<a href="http://www.google.com/chrome" target="_blank" onClick="javascript: pageTracker._trackPageview('/interactive-IE-Chrome-warningLink');"><img src="http://www.dmns.org/media/2252/GoogleChromeLogo.jpg" /></a>
+			</p></span>
 	</body>
 </html>

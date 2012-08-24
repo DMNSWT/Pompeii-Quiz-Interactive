@@ -65,21 +65,6 @@ body {
 /*********************************************
  * HEADERS
  *********************************************/
-.reveal h1, 
-.reveal h2, 
-.reveal h3, 
-.reveal h4 {
-	margin: 0 0 20px 0;
-	
-	color: #711315;
-	
-	font-family: 'League Gothic', sans-serif;
-	line-height: 0.9em;
-	letter-spacing: 0.02em;
-	
-	text-transform: uppercase;
-	text-shadow: 0px 0px 6px rgba(0,0,0,0.2);
-}
 
 .reveal h1 { font-size: 136px;    }
 .reveal h2 { font-size: 40px;     }
