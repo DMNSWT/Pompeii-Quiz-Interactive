@@ -1791,6 +1791,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Juno</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Juno.png" />
@@ -1855,6 +1858,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Minerva</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Minerva.png" />
@@ -1916,6 +1922,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Jupiter</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Jupiter.png" />
@@ -1973,7 +1982,11 @@
 				<section class="home slideBG present">
 					<div class="container">
                     <div class="endCol1">
-                    <h2>End: Diana</h2>
+                    <p>If you were a Roman god you would be</p>
+                    <h2>Diana</h2>
+                    <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                     </div>
                     <div class="endCol2">
                         <img src="images/Diana.png" />
@@ -2033,6 +2046,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Vulcan</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Vulcan.png" />
@@ -2092,6 +2108,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Venus</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Venus.png" />
@@ -2151,6 +2170,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Mars</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/AriesMars.png" />
@@ -2210,6 +2232,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Bacchus</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Bacchus.png" />
@@ -2269,6 +2294,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Mercury</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Mercury.png" />
@@ -2328,6 +2356,9 @@
 						<div class="endCol1">
                         <p>If you were a Roman god you would be</p>
                            <h3>Proserpina</h3>
+                           <div class="StartOver">
+								<a href="adult.html" class="navigateTo">Start Over</a>
+							</div>
                         </div>
                         <div class="endCol2">
                             <img src="images/Stamps/ProserpinaStamp.png" />
@@ -2376,86 +2407,7 @@
 				}
 			</script>
 		</div>
-		<div class="node template">
-			<!-- Used to fade in a background when a specific slide state is reached -->
-			<div class="state-background"></div>
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section class="slideBG past">
-					<div class="container">
-						<h2>Nature</h2>
-						<p>
-							Flavor Text
-						</p>
-						<a href="#" class="navigateTo" id="goTo-adult4e">Next Question</a>
-					</div>
-				</section>
-				<!-- Example of nested vertical slides -->
-				<section class="home slideBG present">
-					<div class="container">
-						<h2>Do you feel more connected to nature or the boardroom</h2>
-						<p>
-							<ul>
-								<li>
-									<a href="#" class="option leftAnswer">Nature</a>
-								</li>
-								<li>
-									<a href="#" class="option rightAnswer">Boardroom</a>
-								</li>
-							</ul>
-						</p>
-					</div>
-				</section>
-				<section class="slideBG future">
-					<div class="container">
-						<h2>Boardroom</h2>
-						<p>
-							Flavor Text
-						</p>
-						<a href="#" class="navigateTo" id="goTo-adult4f">Next Question</a>
-					</div>
-				</section>
-			</div>
-			<script>
-				// Load reveal.js as well as a classList polyfill if needed
-				head.js(!document.body.classList ? 'lib/js/classList.js' : null).js('js/reveal.js', function() {
-
-					// Parse the query string into a key/value object
-					var query = {};
-					location.search.replace(/[A-Z0-9]+?=(\w*)/gi, function(a) {
-						query[a.split('=').shift()] = a.split('=').pop();
-					});
-					// Fires when a slide with data-state=customevent is activated
-					//reveal.addEventListener('customevent', function() {
-					//						console.log('"customevent" has fired');
-					//});
-					// Fires each time a new slide is activated
-					//reveal.addEventListener('slidechanged', function(event) {
-					// event.previousSlide, event.currentSlide, event.indexh, event.indexv
-					//});
-					// Full list of configuration options available here:
-					// https://github.com/hakimel/reveal.js#configuration
-					reveal.initialize({
-						controls : false,
-						progress : false,
-						history : true,
-						slideId : '.adult3e',
-						theme : query.theme || 'default', // default/neon/beige
-						transition : query.transition || 'concave' // default/cube/page/concave/linear(2d)
-					});
-				});
-				// Load highlight.js for syntax highlighting of code samples
-				head.js('lib/js/highlight.js', function() {
-					hljs.initHighlightingOnLoad();
-				});
-				// If we're runnning the notes server we need to include some additional JS
-				// TODO Is there a better way to determine if we're running the notes server?
-				if(window.location.host === 'localhost:1947') {
-					head.js('socket.io/socket.io.js', 'plugin/speakernotes/client.js');
-				}
-			</script>
-		</div>
-		    <!--Chrome Frame For XP machines and IE8 or IE7 users-->
+	<!--Chrome Frame For XP machines and IE8 or IE7 users-->
     <span class="modalBG"></span>
     <span id="chromeFrameContainer">
         <p class="winXPie8Message">
