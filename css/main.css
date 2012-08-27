@@ -510,6 +510,7 @@ body {
 
 .slideBG{
 	 background-image: url('../images/TabletBg.png');
+	 
 }
 
 .container {
@@ -1074,6 +1075,7 @@ div.container{font-size:30px}
             position: absolute;
             width: 100%;
             height: 100%;
+
         }
         .modalBG
         {
@@ -1083,6 +1085,7 @@ div.container{font-size:30px}
             height: 100%;
             z-index: 9999;
             position: absolute;
+            top:0;
         }
         #chromeFrameContainer iframe
         {
@@ -1091,7 +1094,9 @@ div.container{font-size:30px}
             z-index: 99999;
             position: relative;
             border: 2px solid #049fe9;
+            height:500px;
         }
+        
         #chromeFrameContainer p.winXPie8Message, #IEBrowserWarning p
         {
             overflow: hidden;
@@ -1121,7 +1126,7 @@ div.container{font-size:30px}
         {
             border: 1px solid #049fe9;
         }
-        #IEBrowserWarning {display:none;}
+        #IEBrowserWarning {display:none; top:0}
 
 
 /*gods final styles*/
@@ -1130,3 +1135,6 @@ div.container{font-size:30px}
 .endCol2{width:340px; height:450px; float:right;}
 .container .endCol2 p{font-size:20px !important; line-height:28px}
 .endCol2 img{border:none !important; margin:0 0 0 0 !important; padding:0 !important}
+
+#footer{text-align:center; color:#fff; float:left; clear:both; position:absolute; bottom:10px; left:40%; font-size:12px;}
+#footer a{color:#fff}
