@@ -47,7 +47,8 @@ var reveal = (function(){
 		// strings
 		HORIZONTAL_SLIDES_SELECTOR = config.slideId + '.slides>section',
 		VERTICAL_SLIDES_SELECTOR = config.slideId + '.slides>section.present>section',
-		IS_TOUCH_DEVICE = !!( 'ontouchstart' in window ),
+		// IS_TOUCH_DEVICE = !!( 'ontouchstart' in window ),
+		IS_TOUCH_DEVICE = false,
 
 		// The horizontal and verical index of the currently active slide
 		indexh = 0,
