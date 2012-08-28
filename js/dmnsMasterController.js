@@ -5,12 +5,21 @@
 
 $('document').ready(function() {
 	setUpNavigationBetweenNodes('.navigateTo');
+   	MouseOverCheckboxOn();
    	hideAllSlideDivs('.node');
    	fadeInDiv('start');
  });
+ 
+function MouseOverCheckboxOn(){
+	$('.option').mouseover(function(){
+		//$(this).addClass('boxChecked');
+	});
+}
 
 function setUpNavigationBetweenNodes(className){
+	// switch graphic to CHECKED box.
 	$(className).click(function(){
+		$(this).addClass('boxChecked');
 		var goToTarget = this.id.split('-')[1]; // Target parsed from '-' in string id - E.G. "goto-2a" -- 2a is the id of new target
 		goToNode(goToTarget);
 	});
