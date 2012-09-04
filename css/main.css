@@ -462,7 +462,10 @@ body {
 	position: absolute;
 	width: 960px;
 	height: 800px;
-	
+	/*kind of original*/
+/*max-width: 960px;
+	width: 80%;
+	height: 60%;*/
 	left: 50%;
 	top: 50%;
 	margin-left: -450px;
@@ -1148,3 +1151,15 @@ div.container{font-size:30px}
 
 #footer{text-align:center; color:#fff; float:left; clear:both; position:absolute; bottom:10px; left:40%; font-size:12px;}
 #footer a{color:#fff}
+
+
+/*Trying to make iPads behave on resize*/
+
+/*
+@media screen and m and (orientation:portrait) {
+
+    body{width:760px;}
+    .reveal .slides{max-width:760px;}
+}
+*/
+@media  (max-device-width: 480px) and (orientation: landscape) {}
