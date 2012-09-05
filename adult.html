@@ -1733,7 +1733,7 @@
 						<p>
 							
 						</p>
-						<a href="#" class="navigateTo" id="goTo-adultend10">Next Question</a>
+						<a href="#" class="navigateTo" id="goTo-adultendA">Next Question</a>
 						<div class="backAnswer">Back</div>
 					</div>
 				</section>
@@ -2345,12 +2345,15 @@
 				}
 			</script>
 		</div>
-		<div class="node adultend10">
+		<div class="node adultendA">
 			<!-- Used to fade in a background when a specific slide state is reached -->
 			<div class="state-background"></div>
 			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section></section>
+
+            <div class="slides">
+				<section class="slideBG past">
+					<div class="container"></div>
+				</section>
 				<section class="home slideBG present">
 					<div class="container">
 						<div class="endCol1">
@@ -2361,12 +2364,17 @@
 							</div>
                         </div>
                         <div class="endCol2">
-                            <img src="images/Stamps/ProserpinaStamp.png" />
+                            <img src="images/Proserpina.png" />
                         </div>
 					</div>
 				</section>
-				<section></section>
+				<section class="slideBG future">
+					<div class="container"></div>
+				</section>
 			</div>
+
+
+
 			<script src="lib/js/head.min.js"></script>
 			<script>
 				// Load reveal.js as well as a classList polyfill if needed
@@ -2391,7 +2399,7 @@
 						controls : false,
 						progress : false,
 						history : true,
-						slideId : '.adultend10',
+						slideId : '.adultendA',
 						theme : query.theme || 'default', // default/neon/beige
 						transition : query.transition || 'concave' // default/cube/page/concave/linear(2d)
 					});

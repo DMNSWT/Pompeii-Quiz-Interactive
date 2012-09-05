@@ -529,7 +529,7 @@ body {
 .container {
 	position: relative;
 	top: 220px;
-	margin: 0px 100px 0px 100px;
+	margin: 20px 100px 0px 100px;
 } 
 
 
@@ -1068,17 +1068,18 @@ body {
 
 /*DMNS Custom styles and overtakes*/
 body .reveal .slides div.container ul {list-style-type: none}
-body .reveal .slides div.container ul li{float:left;width:245px;}
+body .reveal .slides div.container ul li{float:left;width:245px; margin-top:50px}
 body .reveal .slides div.container ul li a.option{background: url('../images/CheckBoxOff.png') no-repeat  0px 0; display:block;margin-right:20px; padding:10px 0 20px 54px;color:#711315; font-size:30px; }
 body .reveal .slides div.container ul li a.option:hover{background: url('../images/CheckBoxOn.png') no-repeat  0px 0;}
 body .reveal .slides a{}
-div.container{font-size:30px}
-.backAnswer{cursor:pointer; font-size:30px}
+div.container{font-size:30px; text-align:center;}
+.backAnswer, .container a.navigateTo{ padding:10px 0; width:300px; margin-left: auto; margin-right:auto; float:none; border-radius:5px; border:2px solid #711315} 
+.backAnswer{cursor:pointer; font-size:30px;}
 .backAnswer:hover{background:#711315; color:#fff}
 .container a{color: #711315; text-decoration:none; font-size:30px}
 
 .container a:hover{background:#711315; color:#fff; cursor:pointer;}
-.container a.navigateTo{width:100%; display:block;margin:50px 0 20px 0;}
+.container a.navigateTo{display:block;margin:50px auto 20px auto;}
 
 
         #chromeFrameContainer
@@ -1147,7 +1148,11 @@ div.container{font-size:30px}
 .endCol1{width:330px; height:410px; padding:20px; float:left;}
 .endCol2{width:340px; height:450px; float:right;}
 .container .endCol2 p{font-size:20px !important; line-height:28px}
-.endCol2 img{border:none !important; margin:0 0 0 0 !important; padding:0 !important}
+.endCol2 img{border:none !important; margin:0 0 0 0 !important; padding:0 !important;
+ background:transparent !important;
+-webkit-box-shadow: none !important;
+-moz-box-shadow: none !important;
+box-shadow: none !important;}
 
 #footer{text-align:center; color:#fff; float:left; clear:both; position:absolute; bottom:10px; left:40%; font-size:12px;}
 #footer a{color:#fff}
