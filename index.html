@@ -13,20 +13,23 @@
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
+
         <style>
-            .slideBG.reveal{height:841px; width:960px; margin:0 auto; text-align:center;}
+            .slideBG{height:841px; width:960px; margin:0 auto; text-align:center; position:relative;}
             h3{margin:0 !important; width:770px;}
-            .slides{width:770px !important; height:300px !important; margin:-240px 0 0 -380px !important; float:left;padding:0 !important;}
-            .container{margin:-150px 0 0 0 !important; padding:0 !important; width:100% !important}
+            .slides{width:770px !important; height:300px !important; margin:-150px 0 0 -380px !important; float:left;padding:0 !important; position:relative; }
+            .container{margin:0 0 0 0 !important; padding:0 !important; width:100% !important; position:absolute; top:0}
             .container p {margin-top:20px}
             .container li{list-style:none; margin-top:30px}
         </style>
         <script src="js/Jquery1.7.2.min.js"></script>
+        
 		<script src="js/browserDetection.js"></script>
 </head>
 <body>
 <div class="slideBG reveal node">
 <div class="slides">
+
 <div class="container">
     <h3>Which Roman god or goddess are you?</h3>
     <p>Before you take the quiz, please select whether you are a(n)</p>
@@ -39,6 +42,7 @@
 								</li>
 							</ul>
 						</div>
+                   
 					</div>
 </div>
 <footer id="footer">Brought to you by the <a href="http://www.dmns.org">Denver Museum of Nature and Science</a></footer>
